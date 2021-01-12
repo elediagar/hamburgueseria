@@ -38,6 +38,8 @@ body {
 .container{
     max-width: var(--anchomaximo);
     margin: 0 auto;
+    
+    
 }
 
 /* inicio header*/
@@ -113,7 +115,48 @@ header nav .hamburguesa div{
 
 /* fin header*/
 
+/* inicio footer */
 
+footer {
+   margin-top: 100px;
+}
+
+footer .arrow {
+    display: flex;
+    justify-content:right;
+    width: 100%;
+}
+
+footer .arrow a i{
+
+    margin: 0 20px 20px 0;
+    font-size: 300%;
+    color: var(--colorprincipal);
+}
+
+footer .footer-menu{
+    background-color: var(--colorsecundario);
+    height: 3.5em;
+}
+
+footer .footer-menu .container{
+    display: flex;
+    justify-content:center;
+    padding: 1.2em 0;
+}
+
+footer .footer-menu .container a,
+footer .footer-menu .container p{
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+ }
+
+
+
+
+
+/* fin footer */
 
 /* mediaquearis */
 
@@ -149,6 +192,10 @@ header nav .hamburguesa div{
     header .menu li a {
         border: none;
         padding: 0.5em var(--margingrid);
+    }
+
+    footer .footer-menu .container{
+        justify-content:left;
     }
 
 }
