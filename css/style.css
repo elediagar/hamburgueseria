@@ -12,6 +12,8 @@ font-family: 'Montserrat', sans-serif;
 
 html{
     scroll-behavior: smooth;
+    min-height: 100%;
+    position: relative;
 }
 
 img{
@@ -118,41 +120,33 @@ header nav .hamburguesa div{
 /* inicio footer */
 
 footer {
-   margin-top: 100px;
+   background-color: var(--colorsecundario);
+   padding: var(--margingrid) 0px;
+   color: white;
+   text-align: center;
+   position: absolute;
+   width: 100%;
+   bottom: 0;
 }
 
-footer .arrow {
-    display: flex;
-    justify-content:right;
-    width: 100%;
-}
-
-footer .arrow a i{
-
-    margin: 0 20px 20px 0;
-    font-size: 300%;
-    color: var(--colorprincipal);
-}
-
-footer .footer-menu{
-    background-color: var(--colorsecundario);
-    height: 3.5em;
-}
-
-footer .footer-menu .container{
-    display: flex;
-    justify-content:center;
-    padding: 1.2em 0;
-}
-
-footer .footer-menu .container a,
-footer .footer-menu .container p{
+footer .container a{
     color: white;
     text-decoration: none;
-    margin: 0 5px;
- }
+}
 
+footer .container a:hover{
+    color: var(--colorprincipal);
+    
+}
 
+.arrow a{
+    display: block;
+    color: var(--colorprincipal);
+    font-size: 300%;
+    position: fixed; 
+    bottom: 60px;
+    right: 20px;
+}
 
 
 
@@ -171,6 +165,9 @@ footer .footer-menu .container p{
         font-size: 120%;
     }
 
+    footer {
+        text-align: left;
+    }
 
 }
 
@@ -192,10 +189,6 @@ footer .footer-menu .container p{
     header .menu li a {
         border: none;
         padding: 0.5em var(--margingrid);
-    }
-
-    footer .footer-menu .container{
-        justify-content:left;
     }
 
 }
