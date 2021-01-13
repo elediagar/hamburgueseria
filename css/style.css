@@ -151,7 +151,7 @@ footer .container a:hover{
     color: var(--colorprincipal);
     font-size: 300%;
     position: fixed; 
-    bottom: 60px;
+    bottom: 4%;
     right: 20px;
 }
 
@@ -229,7 +229,7 @@ footer .container a:hover{
 /* inicio section services */
 
 main section {
-    padding: calc(var(--margingrid)*2) var(--margingrid) calc(var(--margingrid)*5) var(--margingrid) ;
+    padding: calc(var(--margingrid)*3) var(--margingrid);
 }
 
 main section h2 {
@@ -307,6 +307,48 @@ main section p{
 
 /* fin section services*/
 
+/* inicio section about*/
+
+main #aboutus .flex .column {
+    margin: var(--margingrid) 0;
+}
+
+main #aboutus .column h3 {
+    font-weight: 700;
+    font-size: 1.1em;
+}
+
+main #aboutus .column h4 {
+    margin: 0.8em 0;
+    color: var(--colorprincipal);
+}
+
+main #aboutus .imagen{
+    width: 85%;
+    margin: 0 auto;
+}
+
+main #aboutus .imagen .marco {
+    border: 3px solid var(--colorprincipal);
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+
+main #aboutus .imagen .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main #aboutus .imagen:hover .marco,
+main #aboutus .imagen:hover .marco img{
+    transform: rotateZ(0deg);
+}
+
+
+
+
+/* fin section about*/
+
 /* mediaquearis */
 
 @media (min-width: 600px) {
@@ -324,6 +366,23 @@ main section p{
         border-left:1px solid #aaa;
         padding: var(--margingrid) ;
     }
+
+    main #aboutus .flex {
+        display:flex;
+    }
+
+    main #aboutus {
+        margin: calc(var(--margingrid)*2) 0;
+    }
+
+    main #aboutus .imagen{
+        width: 80%;
+    }
+
+    main #aboutus .flex .column {
+        margin-bottom: 2em;
+    }
+
 }
 
 @media (min-width:768px){
