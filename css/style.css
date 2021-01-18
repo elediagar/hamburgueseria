@@ -395,17 +395,64 @@ main #blog .imagen .fecha p{
     
 }
 
-
-
-
-
-
-
-
-
-
-
 /* fin section blog*/
+
+
+
+/* inicio section menu */
+
+main #menu .flex{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: var(--margingrid);
+}
+
+
+main #menu .flex .column-izquierda{
+    width: calc(30% - var(--margingrid) * 2);
+    margin: var(--margingrid) var(--margingrid);
+}
+
+main #menu .flex .column-derecha{
+    width: calc(70% - var(--margingrid) * 2);
+    margin: var(--margingrid) var(--margingrid);
+    display:flex;
+    flex-direction: column;
+}
+
+main #menu .flex .column-derecha .row{
+    display:flex;
+    flex-wrap: wrap;
+    margin: var(--margingrid) 0;
+
+}
+
+main #menu .flex .column-derecha .row .imagen{
+    width: calc(30% - var(--margingrid) * 2);
+}
+
+main #menu .flex .column-derecha .row .contenido{
+    width: calc(50% - var(--margingrid) * 2);
+    margin: 0 var(--margingrid);
+}
+
+main #menu .flex .column-derecha .row p:last-child{
+    width: calc(20% - var(--margingrid) * 2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* fin section menu*/
+
 
 /* mediaquearis */
 
