@@ -352,7 +352,7 @@ main #aboutus .imagen:hover .marco img{
 main #blog .flex{
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: var(--margingrid)
+    margin-bottom: var(--margingrid);
 }
 
 main #blog .flex .column{
@@ -392,7 +392,6 @@ main #blog .imagen .fecha p{
     font-weight: 700;
     margin: 0 auto;
     text-align: center;
-    
 }
 
 /* fin section blog*/
@@ -401,54 +400,87 @@ main #blog .imagen .fecha p{
 
 /* inicio section menu */
 
-main #menu .flex{
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: var(--margingrid);
+main #menu {
+    background-color: #21242e;
+    color: white;
 }
 
-
-main #menu .flex .column-izquierda{
-    width: calc(30% - var(--margingrid) * 2);
-    margin: var(--margingrid) var(--margingrid);
+main #menu .container{
+    padding: 0 var(--margingrid);
 }
+
+main #menu .flex {
+    margin: 40px 0;
+}
+
+main #menu p,
+main #menu h2,
+main #menu h3{
+    color: white;
+}
+
+main #menu h3{
+    font-weight: 700;
+    margin-top: 4px;
+}
+main #menu .flex .column-izquierda a{
+    padding: var(--margingrid);
+    margin-bottom: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 100;
+    display: block;
+}
+
+main #menu .flex .column-izquierda .activo{
+    background-color: var(--colorprincipal);
+    border-radius: 10px;
+}
+
+main #menu .flex .column-izquierda > div{
+    margin-top: 80px;
+}
+
+main #menu .flex .column-izquierda > div hr{
+    width: 80px;
+    left: 0;
+    border-color: var(--colorprincipal);
+    margin: var(--margingrid) 0;
+}
+
 
 main #menu .flex .column-derecha{
-    width: calc(70% - var(--margingrid) * 2);
     margin: var(--margingrid) var(--margingrid);
-    display:flex;
-    flex-direction: column;
+}
+
+main #menu .flex .column-derecha .row:after{
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
 }
 
 main #menu .flex .column-derecha .row{
-    display:flex;
-    flex-wrap: wrap;
-    margin: var(--margingrid) 0;
-
-}
-
-main #menu .flex .column-derecha .row .imagen{
-    width: calc(30% - var(--margingrid) * 2);
+    margin-bottom: 20px;
 }
 
 main #menu .flex .column-derecha .row .contenido{
-    width: calc(50% - var(--margingrid) * 2);
-    margin: 0 var(--margingrid);
+    float: left;
+    width: 80%;
+    margin: var(--margingrid) 0;
+}
+
+main #menu .flex .column-derecha .row p{
+    margin: var(--margingrid) 0;
 }
 
 main #menu .flex .column-derecha .row p:last-child{
-    width: calc(20% - var(--margingrid) * 2);
+    float: right;
+    width: 10%;
+    margin: var(--margingrid) 0;
+    color: var(--colorprincipal);
+    font-size: 1.1em;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 /* fin section menu*/
@@ -514,10 +546,90 @@ main #menu .flex .column-derecha .row p:last-child{
         grid-column: 3/4;
     }
 
+
+    main #menu .flex{
+        margin-bottom: var(--margingrid);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+
     main #blog .flex .column{
         width: calc(33% - var(--margingrid) * 2);
-        margin: var(--margingrid) var(--margingrid);
     }
+
+    main #menu .flex .column-izquierda{
+        width: calc(30% - var(--margingrid) * 3);
+        margin-right: calc(var(--margingrid)*3);
+    }
+    
+    main #menu .flex .column-derecha{
+        width: 70%;
+        margin: 0;
+        display:flex;
+        flex-direction: column;
+    }
+    
+    main #menu .flex .column-derecha .row{
+        display:flex;
+        flex-wrap: wrap;
+    }
+    
+    main #menu .flex .column-derecha .row .imagen{
+        width: 30%;
+        margin-top: 4px;
+    }
+    
+    main #menu .flex .column-derecha .row .contenido{
+        width: calc(60% - var(--margingrid) * 2);
+        margin: 0 var(--margingrid);
+    }
+    
+    main #menu .flex .column-derecha .row p:last-child{
+        width: 10%;
+        margin: 0;
+    }
+    
+    
+    /* fin section menu*/
+    
+    
+    /* mediaquearis */
+    
+    @media (min-width: 600px) {
+        main #ourservices .grid{
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--margingrid);
+        }
+    
+        main #ourservices .grid article:last-child{
+            grid-column: 1/3;
+        }
+    
+        main #ourservices .grid article{
+            border-bottom: none;
+            border-left:1px solid #aaa;
+            padding: var(--margingrid) ;
+        }
+    
+        main #aboutus .flex {
+            display:flex;
+        }
+    
+        main #aboutus {
+            margin: calc(var(--margingrid)*2) 0;
+        }
+    
+        main #aboutus .imagen{
+            width: 80%;
+        }
+    
+        main #aboutus .flex .column {
+            margin-bottom: 2em;
+        }
+    
+    }
+    
 }
 
     
